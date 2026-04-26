@@ -11,6 +11,7 @@ public class UserController extends ApiRequest {
         super(URL);
     }
 
+
     public User[] getUsers() {
         this.response = get(getEndpoint(PUBLIC, V2, USERS));
         return this.response.as(User[].class);
